@@ -1,0 +1,16 @@
+#:kivy 1.9.0
+# #:import Clipboard kivy.core.clipboard.Clipboard
+
+<DoubletapClipboardInterface>:
+    orientation: 'vertical'
+
+    TextInput:
+        font_name: 'MeiryoUI'
+        font_size: self.height * 0.2
+        hint_text: 'Try to paste here to see if it works'
+
+    TouchLabel:
+        font_name: 'MeiryoUI'
+        text: '愛'
+        font_size: self.height * 0.6
+        #on_double_tap: Clipboard.copy(self.text)  # <-- not working
