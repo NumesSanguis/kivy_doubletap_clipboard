@@ -13,7 +13,7 @@ package.domain = surafusoft.eu
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas, ttf
+source.include_exts = py,png,jpg,kv,atlas,ttf
 
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
@@ -22,13 +22,13 @@ source.include_exts = py,png,jpg,kv,atlas, ttf
 #source.exclude_exts = spec
 
 # (list) List of directory to exclude (let empty to not exclude anything)
-source.exclude_dirs = bin
+#source.exclude_dirs = tests, bin
 
 # (list) List of exclusions using pattern matching
 #source.exclude_patterns = license,images/*/*.jpg
 
 # (str) Application versioning (method 1)
-# version = 0.1
+#version = 0.1
 
 # (str) Application versioning (method 2)
 version.regex = __version__ = ['"](.*)['"]
@@ -36,8 +36,7 @@ version.filename = %(source.dir)s/main.py
 
 # (list) Application requirements
 # comma seperated e.g. requirements = sqlite3,kivy
-requirements = kivy==master,python3crystax,hostpython3
-#,hostpython3,python==3
+requirements = kivy==master,python3crystax
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -76,13 +75,13 @@ fullscreen = 0
 #android.permissions = INTERNET
 
 # (int) Android API to use
-android.api = 19
+#android.api = 19
 
 # (int) Minimum API required
-android.minapi = 9
+#android.minapi = 9
 
 # (int) Android SDK version to use
-android.sdk = 21
+#android.sdk = 20
 
 # (str) Android NDK version to use
 #android.ndk = 9c
@@ -91,7 +90,7 @@ android.sdk = 21
 #android.private_storage = True
 
 # (str) Android NDK directory (if empty, it will be automatically downloaded.)
-#android.ndk_path =
+android.ndk_path = ~/crystax-ndk-10.3.2/
 
 # (str) Android SDK directory (if empty, it will be automatically downloaded.)
 #android.sdk_path =
@@ -101,6 +100,9 @@ android.sdk = 21
 
 # (str) python-for-android git clone directory (if empty, it will be automatically cloned from github)
 #android.p4a_dir =
+
+# (str) The directory in which python-for-android should look for your own build recipes (if any)
+#p4a.local_recipes = 
 
 # (list) python-for-android whitelist
 #android.p4a_whitelist =

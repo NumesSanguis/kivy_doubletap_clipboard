@@ -1,0 +1,102 @@
+    Error:
+10-11 17:35:23.095 20172 20172 D AndroidRuntime: Shutting down VM
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: FATAL EXCEPTION: main
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: Process: surafusoft.eu.doubletapclipboard, PID: 20172
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{surafusoft.eu.doubletapclipboard/org.kivy.android.PythonActivity}: java.lang.IllegalStateException: The specified child already has a parent. You must call removeView() on the child's parent first.
+
+
+    Full log:
+10-11 17:35:23.043  2509  2509 D APM::AudioPolicyManager: getOutput() device 2, stream 1, samplingRate 0, format 0, channelMask 3, flags 0
+10-11 17:35:23.043  2509  2509 D AudioPolicyManagerCustom: getOutput() The last flag  8
+10-11 17:35:23.044  2509  2509 D AudioPolicyManagerCustom: getOutputForDevice() returns output 6
+10-11 17:35:23.045  2509  3531 D APM::AudioPolicyManager: getOutput() device 2, stream 1, samplingRate 0, format 0, channelMask 3, flags 0
+10-11 17:35:23.045  2509  3531 D AudioPolicyManagerCustom: getOutput() The last flag  8
+10-11 17:35:23.046  2509  3531 D AudioPolicyManagerCustom: getOutputForDevice() returns output 6
+10-11 17:35:23.046  2509  3502 D APM::AudioPolicyManager: startOutput() output 2, stream 1, session 20
+10-11 17:35:23.047  2509  3502 D AudioPolicyManagerCustom: getNewOutputDevice() selected device 2
+10-11 17:35:23.047  2509  3502 D APM::AudioPolicyManager: setOutputDevice() device 0002 delayMs 0
+10-11 17:35:23.046  3007  3984 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=surafusoft.eu.doubletapclipboard/org.kivy.android.PythonActivity (has extras)} from uid 10099 pid 3997 on display 0
+10-11 17:35:23.048  2509  3511 D audio_hw_primary: out_set_parameters: enter: usecase(1: low-latency-playback) kvpairs: routing=2
+10-11 17:35:23.048  2509  3511 D audio_hw_extn: audio_extn_set_anc_parameters: anc_enabled:0
+10-11 17:35:23.048  2509  3511 D audio_hw_spkr_prot: audio_extn_fbsp_set_parameters: Speaker protection disabled
+10-11 17:35:23.048  2509  3502 D APM::AudioPolicyManager: startOutput()--
+10-11 17:35:23.056  3007  3084 D PhoneWindow: state.preset = false, color: 0, translucent = 0
+10-11 17:35:23.056  3007  3084 D PhoneWindow: state.preset = false, color: 0, translucent = 0
+10-11 17:35:23.057  3007  3084 D PhoneWindow: state.preset = false, color: -16777216, translucent = 0
+10-11 17:35:23.058  2509  3511 D audio_hw_primary: start_output_stream: enter: stream(0xf297c380)usecase(1: low-latency-playback) devices(0x2)
+10-11 17:35:23.059  2509  3511 D audio_hw_primary: select_devices: out_snd_device(2: speaker) in_snd_device(0: )
+10-11 17:35:23.059  2509  3511 I msm8974_platform: platform_check_and_set_codec_backend_cfg: Usecase bitwidth 16, samplerate 48000
+10-11 17:35:23.059  2509  3511 I msm8974_platform: platform_check_and_set_codec_backend_cfg: new_snd_devices[0] is 2
+10-11 17:35:23.059  2509  3511 I msm8974_platform: platform_check_codec_backend_cfg Codec selected backend: 0 current bit width: 16 and sample rate: 48000
+10-11 17:35:23.059  2509  3511 D msm8974_platform: platform_check_codec_backend_cfg: resetting sample_rate back to default, backend_idx: 0
+10-11 17:35:23.059  2509  3511 I msm8974_platform: platform_check_codec_backend_cfg Codec selected backend: 0 updated bit width: 16 and sample rate: 48000
+10-11 17:35:23.059  2509  3511 D hardware_info: hw_info_append_hw_type : device_name = speaker
+10-11 17:35:23.059  2509  3511 D audio_hw_primary: enable_snd_device: snd_device(2: speaker)
+10-11 17:35:23.059  2509  3511 I soundtrigger: audio_extn_sound_trigger_update_device_status: device 0x2 of type 0 for Event 1, with Raise=0
+10-11 17:35:23.059  2509  3511 D aud_dev_arbi: acquireOneDevice: device owner for device 2 is 1
+10-11 17:35:23.061  5330  5334 E ANDR-PERF-RESOURCEQS: Failed to apply optimization [4, 0]
+10-11 17:35:23.063  2509  3511 I audio_hw_primary: select_devices Selected apptype: 69937
+10-11 17:35:23.063  2509  3511 D soundtrigger: audio_extn_sound_trigger_update_stream_status: uc_id 1 of type 0 for Event 3, with Raise=0
+10-11 17:35:23.064  2509  3511 I audio_hw_utils: audio_extn_utils_send_app_type_cfg PLAYBACK app_type 69937, acdb_dev_id 15, sample_rate 48000
+10-11 17:35:23.064  2509  3511 D ACDB-LOADER: ACDB -> send_audio_cal, acdb_id = 15, path = 0, app id = 0x11131, sample rate = 48000
+10-11 17:35:23.064  2509  3511 D ACDB-LOADER: ACDB -> AUDIO_SET_VOL_CAL cal type = 12
+10-11 17:35:23.064  2509  3511 D ACDB-LOADER: ACDB -> audstrm_cal->cal_type.cal_data.cal_size = 16
+10-11 17:35:23.064  2509  3511 D ACDB-LOADER: ACDB -> GET_AFE_TOPOLOGY_ID for adcd_id 15, Topology Id 1025e
+10-11 17:35:23.064  2509  3511 D ACDB-LOADER: ACDB -> send_hw_delay : acdb_id = 15 path = 0
+10-11 17:35:23.064  2509  3511 D audio_hw_primary: enable_audio_route: apply mixer and update path: low-latency-playback quat_i2s
+10-11 17:35:23.065  2509  3511 D audio_hw_primary: select_devices: done
+10-11 17:35:23.066  3007  3084 D PhoneWindow: state.preset = true, color: -16777216, translucent = 0
+10-11 17:35:23.069  2509  3511 D msm8974_platform: platform_set_channel_map mixer_ctl_name:Playback Channel Map15
+10-11 17:35:23.069  2509  3511 D msm8974_platform: platform_set_channel_map: set mapping(1 2 0 0 0 0 0 0) for channel:2
+10-11 17:35:23.075  3997  3997 D AppTracker: App Event: stop
+10-11 17:35:23.094 20172 20172 V PythonActivity: My oncreate running
+10-11 17:35:23.094 20172 20172 D PhoneWindow: state.preset = false, color: 0, translucent = 0
+10-11 17:35:23.094 20172 20172 D PhoneWindow: state.preset = false, color: 0, translucent = 0
+10-11 17:35:23.095 20172 20172 D PhoneWindow: state.preset = false, color: -16777216, translucent = 0
+10-11 17:35:23.095 20172 20172 D AndroidRuntime: Shutting down VM
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: FATAL EXCEPTION: main
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: Process: surafusoft.eu.doubletapclipboard, PID: 20172
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{surafusoft.eu.doubletapclipboard/org.kivy.android.PythonActivity}: java.lang.IllegalStateException: The specified child already has a parent. You must call removeView() on the child's parent first.
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2456)
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2539)
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	at android.app.ActivityThread.access$900(ActivityThread.java:159)
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1384)
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:102)
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:152)
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:5507)
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726)
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: Caused by: java.lang.IllegalStateException: The specified child already has a parent. You must call removeView() on the child's parent first.
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	at android.view.ViewGroup.addViewInner(ViewGroup.java:4314)
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	at android.view.ViewGroup.addView(ViewGroup.java:4150)
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	at android.view.ViewGroup.addView(ViewGroup.java:4122)
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	at com.android.internal.policy.PhoneWindow.setContentView(PhoneWindow.java:431)
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	at com.android.internal.policy.PhoneWindow.setContentView(PhoneWindow.java:412)
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	at android.app.Activity.setContentView(Activity.java:2216)
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	at org.kivy.android.PythonActivity.showLoadingScreen(PythonActivity.java:367)
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	at org.kivy.android.PythonActivity.onCreate(PythonActivity.java:61)
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:6304)
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1118)
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2409)
+10-11 17:35:23.096 20172 20172 E AndroidRuntime: 	... 9 more
+10-11 17:35:23.096 20172 20172 D AppTracker: App Event: crash
+10-11 17:35:23.101  3007  3983 W ActivityManager:   Force finishing activity surafusoft.eu.doubletapclipboard/org.kivy.android.PythonActivity
+10-11 17:35:23.113  3007 20198 D DropBoxManagerService: file :: /data/system/dropbox/data_app_crash@2016-10-11-17_35_23_104.txt
+10-11 17:35:23.123  2509  3511 D audio_hw_primary: start_output_stream: exit
+10-11 17:35:23.377  2509  3502 D APM::AudioPolicyManager: stopOutput() output 2, stream 1, session 20
+10-11 17:35:23.377  2509  3502 D AudioPolicyManagerCustom: getNewOutputDevice() selected device 0
+10-11 17:35:23.377  2509  3502 D APM::AudioPolicyManager: setOutputDevice() device 0000 delayMs 96
+10-11 17:35:23.405  3007  3983 I WindowManager: Screenshot max retries 4 of Token{b416a4b ActivityRecord{40c6f1a u0 surafusoft.eu.doubletapclipboard/org.kivy.android.PythonActivity t286 f}} appWin=Window{cf262e6 u0 Starting surafusoft.eu.doubletapclipboard} drawState=3, isFingerprintAuthenticating = false
+10-11 17:35:23.409  3007  3065 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@9257840
+10-11 17:35:23.409  3007  3065 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@117e379
+10-11 17:35:23.412  3007  3065 W ActivityManager:  Dismiss app error dialog : surafusoft.eu.doubletapclipboard
+10-11 17:35:23.413  3007  3065 W AppOps  : Finishing op nesting under-run: uid 1000 pkg android code 24 time=0 duration=0 nesting=0
+10-11 17:35:23.416  3997  3997 D AbstractTracker: Event success
+10-11 17:35:23.417 20172 20172 I Process : Sending signal. PID: 20172 SIG: 9
+10-11 17:35:23.426  3007  4914 I ActivityManager: Process surafusoft.eu.doubletapclipboard (pid 20172) has died
+10-11 17:35:23.426  3007  3976 D GraphicsStats: Buffer count: 16
+10-11 17:35:23.434  3997  3997 D AppTracker: App Event: start
+10-11 17:35:23.447  3007  3062 V ActivityManager: killProcessGroupAsync took 21 ms for PID 20172 on thread 14
+10-11 17:35:23.450  3007  3981 W InputMethodManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@7a57c3b attribute=null, token = android.os.BinderProxy@1619b76
+10-11 17:35:23.452  3997  3997 D AbstractTracker: Event success
